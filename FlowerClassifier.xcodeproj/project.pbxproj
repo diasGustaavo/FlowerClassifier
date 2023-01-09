@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B424CEC1296C6E74005176E0 /* CoreMLTools in Resources */ = {isa = PBXBuildFile; fileRef = B424CEC0296C6E74005176E0 /* CoreMLTools */; };
 		B4553239296C6D6C009245D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4553238296C6D6C009245D1 /* AppDelegate.swift */; };
 		B455323B296C6D6C009245D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455323A296C6D6C009245D1 /* SceneDelegate.swift */; };
 		B455323D296C6D6C009245D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455323C296C6D6C009245D1 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B424CEC0296C6E74005176E0 /* CoreMLTools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CoreMLTools; sourceTree = "<group>"; };
 		B4553235296C6D6C009245D1 /* FlowerClassifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowerClassifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4553238296C6D6C009245D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B455323A296C6D6C009245D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		B4553237296C6D6C009245D1 /* FlowerClassifier */ = {
 			isa = PBXGroup;
 			children = (
+				B424CEC0296C6E74005176E0 /* CoreMLTools */,
 				B4553238296C6D6C009245D1 /* AppDelegate.swift */,
 				B455323A296C6D6C009245D1 /* SceneDelegate.swift */,
 				B455323C296C6D6C009245D1 /* ViewController.swift */,
@@ -127,6 +130,7 @@
 			files = (
 				B4553245296C6D6D009245D1 /* LaunchScreen.storyboard in Resources */,
 				B4553242296C6D6D009245D1 /* Assets.xcassets in Resources */,
+				B424CEC1296C6E74005176E0 /* CoreMLTools in Resources */,
 				B4553240296C6D6C009245D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +299,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +328,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
