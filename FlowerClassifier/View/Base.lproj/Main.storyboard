@@ -42,6 +42,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I7L-Pm-MuP">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="organize" id="RRt-Zf-JBT">
+                            <connections>
+                                <action selector="libraryButtonPressed:" destination="BYZ-38-t0r" id="Z3C-1V-a1k"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="ZRi-mr-G8J">
                             <connections>
                                 <action selector="cameraButtonPressed:" destination="BYZ-38-t0r" id="tqa-OP-nGy"/>

@@ -31,6 +31,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     
     @IBAction func cameraButtonPressed(_ sender: UIBarButtonItem) {
+        imagePicker.sourceType = .camera
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func libraryButtonPressed(_ sender: Any) {
+        imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
     }
 }
