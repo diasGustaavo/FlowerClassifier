@@ -17,17 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="erk-mz-JpO">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="5EU-Zs-RQf">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9KQ-wt-Q0L">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="354.66666666666669"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kb3-ax-qh6">
+                                        <rect key="frame" x="0.0" y="360.66666666666674" width="393" height="354.33333333333326"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="erk-mz-JpO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KfZ-cg-Rk1"/>
-                            <constraint firstItem="erk-mz-JpO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fAM-D7-UZC"/>
-                            <constraint firstItem="erk-mz-JpO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="paY-aM-ds5"/>
-                            <constraint firstItem="erk-mz-JpO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pe4-JO-Oot"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5EU-Zs-RQf" secondAttribute="bottom" id="KbW-BN-ME2"/>
+                            <constraint firstItem="5EU-Zs-RQf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="aXk-tg-VN0"/>
+                            <constraint firstItem="5EU-Zs-RQf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hyL-Kl-0TP"/>
+                            <constraint firstItem="5EU-Zs-RQf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uh9-9z-okt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I7L-Pm-MuP">
@@ -38,7 +49,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageView" destination="erk-mz-JpO" id="GoE-Ge-2uo"/>
+                        <outlet property="extractLabel" destination="Kb3-ax-qh6" id="tVc-Mr-jwF"/>
+                        <outlet property="imageView" destination="9KQ-wt-Q0L" id="2G6-Sd-klj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
