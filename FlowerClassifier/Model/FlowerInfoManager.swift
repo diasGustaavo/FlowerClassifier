@@ -25,7 +25,12 @@ struct FlowerInfoManager {
     var delegate: FlowerInfoManagerDelegate?
     
     mutating func fetchFlowerInfo(flowerName: String) {
-        self.flowerName = flowerName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        if flowerName == "thorn apple" {
+            self.flowerName = "Datura%20stramonium"
+        } else {
+            self.flowerName = flowerName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        }
+        
         performRequest()
     }
 //
@@ -35,8 +40,8 @@ struct FlowerInfoManager {
         
         let group = DispatchGroup()
         group.enter()
-        
         DispatchQueue.global(qos: .default).async {
+            print(flowerURL)
             if let url = URL(string: flowerURL) {
                 // 2. Create URLSession
                 let session = URLSession(configuration: .default)
