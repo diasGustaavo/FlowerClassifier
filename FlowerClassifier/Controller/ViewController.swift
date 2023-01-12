@@ -20,7 +20,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let newNavBarAppearance = customNavBarAppearance()
+        navigationController!.navigationBar.scrollEdgeAppearance = newNavBarAppearance
+        navigationController!.navigationBar.compactAppearance = newNavBarAppearance
+        navigationController!.navigationBar.standardAppearance = newNavBarAppearance
+        if #available(iOS 15.0, *) {
+            navigationController!.navigationBar.compactScrollEdgeAppearance = newNavBarAppearance
+        }
+    
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         imagePicker.allowsEditing = false
@@ -39,6 +47,34 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     @IBAction func libraryButtonPressed(_ sender: Any) {
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func customNavBarAppearance() -> UINavigationBarAppearance {
+        let customNavBarAppearance = UINavigationBarAppearance()
+        
+        customNavBarAppearance.configureWithOpaqueBackground()
+        if self.traitCollection.userInterfaceStyle == .dark {
+            customNavBarAppearance.backgroundColor = UIColor(red: 0.38, green: 0.42, blue: 0.22, alpha: 1.00)
+        } else {
+            customNavBarAppearance.backgroundColor = UIColor(red: 0.16, green: 0.21, blue: 0.09, alpha: 1.00)
+        }
+
+        
+        // Apply white colored normal and large titles.
+        customNavBarAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: "accentYellow")!]
+        customNavBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "accentYellow")!]
+
+        // Apply white color to all the nav bar buttons.
+        let barButtonItemAppearance = UIBarButtonItemAppearance(style: .plain)
+        barButtonItemAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
+        barButtonItemAppearance.disabled.titleTextAttributes = [.foregroundColor: UIColor.lightText]
+        barButtonItemAppearance.highlighted.titleTextAttributes = [.foregroundColor: UIColor.label]
+        barButtonItemAppearance.focused.titleTextAttributes = [.foregroundColor: UIColor.white]
+        customNavBarAppearance.buttonAppearance = barButtonItemAppearance
+        customNavBarAppearance.backButtonAppearance = barButtonItemAppearance
+        customNavBarAppearance.doneButtonAppearance = barButtonItemAppearance
+        
+        return customNavBarAppearance
     }
 }
 
@@ -71,11 +107,9 @@ extension ViewController: FlowerInfoManagerDelegate {
     func didGetInfo(_ flowerInfoManager: FlowerInfoManager, flower: FlowerModel) {
         DispatchQueue.main.async {
             if let safeExtractLabel = flower.extract {
-                print(safeExtractLabel)
                 self.extractLabel.text = safeExtractLabel
             }
             if let flowerURL = flower.imageLink {
-                print(flowerURL)
                 self.imageView.sd_setImage(with: flowerURL)
             }
         }
