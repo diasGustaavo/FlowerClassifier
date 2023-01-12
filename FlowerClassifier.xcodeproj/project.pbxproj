@@ -342,11 +342,12 @@
 				DEVELOPMENT_TEAM = 9YRW6AKFZ7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlowerClassifier/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need acess to your camera in order to detect which flower you're facing.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need acess to your photo library in order to detect the flower in the photo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -371,11 +372,12 @@
 				DEVELOPMENT_TEAM = 9YRW6AKFZ7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlowerClassifier/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need acess to your camera in order to detect which flower you're facing.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need acess to your photo library in order to detect the flower in the photo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
